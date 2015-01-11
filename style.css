@@ -1,0 +1,72 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: helvetica;
+	background: url(to-do-background.jpeg) no-repeat center center fixed;
+	background-size: cover;
+}
+
+h1 {
+	font-weight: 100;
+	letter-spacing: 2px;
+}
+
+.wrapper {
+	text-align: center;
+	margin: 0 auto;
+	color: #fff;
+}
+
+.to-do-list {
+	display: inline-block;
+	background: #000;
+	opacity: 0.7;
+	border: 2px solid grey;
+	border-radius: 10px;
+	padding: 20px;
+	margin: 50px 0;
+	width: 50%;
+}
+
+.to-do-list input[type="text"] {
+	width: 90%;
+	outline: none;
+	border-style: none;
+	height: 60px;
+	font-size: 25px;
+	padding: 0 10px;
+	margin: 10px 0;
+	border-bottom: 2px solid green;
+	background: transparent;
+	color: #fff;
+	font-family: monospace;
+	font-weight: 100;
+}
+
+.taskList{
+	list-style: none;
+	text-align: left;
+	font-size: 25px;
+	font-weight: 100;
+	margin: 10px 0 0 25px;
+	height: 50px;
+}
+
+.taskList input[type="checkbox"] {
+	transform: scale(1.5);
+	-webkit-transform: scale(1.5);
+	vertical-align: middle;
+}
+
+.taskList label {
+	padding: 0 0 0 15px;
+	vertical-align: middle;
+}
+
+
+
+
+
