@@ -1,8 +1,5 @@
 var taskInput = document.getElementById("newTask");
 var taskList = document.querySelector("ul");
-var checkBox = taskList.querySelector("input[type=checkbox]");
-
-console.log(checkBox);
 
 var addTask = function() {
 	var listItem = document.createElement("li");
@@ -17,13 +14,18 @@ var addTask = function() {
 
 	listItem.className = "taskList"
 
+	//preventing empty tasks from being added. only if someone enters a task, it should get added.
 	if (taskInput.value) {
-		taskList.appendChild(listItem);
+		taskList.insertBefore(listItem, taskList.firstChild);
 	} else {
 		alert("please enter a task");
 	}
 	
+	//after adding the task, the input box should be empty
 	taskInput.value = "";
+
+	//adding an event listener to checkbox so that whenever it is checked, the task is deleted
+	checkBox.addEventListener("change", deleteTask);
 };
 
 var deleteTask = function() {
@@ -42,6 +44,4 @@ taskInput.addEventListener("keyup", function(e) {
 		addTask();
 	}
 });
-
-checkBox.addEventListener("change", deleteTask);
 
